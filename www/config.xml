@@ -7,18 +7,11 @@
         version   = "1.0.0">
 
     <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />    
-   
-    <name>GoingOut</name>
-
-
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <name>DreamHoliday</name>
     <description>
-        The dream application for youngsters
+        Choose your dream holiday
     </description>
-
-
-    <feature name="http://api.phonegap.com/1.0/geolocation"/> 
-
-    <preference name="orientation"                value="portrait" /> 
 	
 	<access origin="*"/>
 </widget>
