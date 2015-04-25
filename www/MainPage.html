@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="jquery-mobile/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/MainPage.css">
+   
+  <script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+  <script src="phonegap.js"></script>
+  <script src="js/MainPage.js"></script>
+  
+
+
+</head>
+<body onLoad="onLoad()">
+<div data-role="page" data-control-title="page2" id="page2">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            GoingOut
+        </h1>
+        <div data-controltype="textblock">
+            <p style="text-align: center;">
+                <b>
+                    Let's go have some fun!
+                </b>
+            </p>
+        </div>
+    </div>
+    <div role="main" class="ui-content">
+        <div class="ui-field-contain" data-controltype="selectmenu">
+            <label for="Distance">
+                Select distance
+            </label>
+            <select id="Distance" name="" data-theme="d" data-mini="true">
+                <option value="100">
+                    100 meters
+                </option>
+                <option value="200">
+                    200 meters
+                </option>
+                <option value="300">
+                    300 meters
+                </option>
+                <option value="500">
+                    500 meters
+                </option>
+                <option value="1000">
+                    1 kilometer
+                </option>
+                <option value="2000">
+                    2 kilometers
+                </option>
+                <option value="5000">
+                    5 kilometers
+                </option>
+            </select>
+        </div>
+        <div id="types" class="ui-field-contain" data-controltype="checkboxes">
+            <fieldset data-role="controlgroup" data-type="vertical">
+                <legend>
+                    What do you want to do?
+                </legend>
+                <input id="food" name="" type="checkbox">
+                <label for="food">
+                    Eat
+                </label>
+                <input id="drink" name="" type="checkbox">
+                <label for="drink">
+                    Have a drink
+                </label>
+                <input id="dance" name="" type="checkbox">
+                <label for="dance">
+                    Listen to music / dance
+                </label>
+            </fieldset>
+        </div>
+        <div id="checkboxes2" class="ui-field-contain" data-controltype="checkboxes">
+            <fieldset data-role="controlgroup" data-type="vertical">
+                <legend>
+                    Choose:
+                </legend>
+                <input id="checkbox2" name="When" data-theme="a" type="checkbox">
+                <label for="checkbox2">
+                    Opened now
+                </label>
+            </fieldset>
+        </div>
+        <input type="submit" data-icon="search" data-iconpos="bottom" value="Search" id="searchButton"
+        data-mini="true"
+		></input>
+    </div>
+</div>
+</body>
+</html>
