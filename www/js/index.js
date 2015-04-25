@@ -8,9 +8,7 @@ var nr = 1;
 var bubu = "Bubu"
 
     function onLoad() {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-      WebView.setWebContentsDebuggingEnabled(true);
-  }
+		
         document.addEventListener("deviceready", onDeviceReady, false);
 		console.log("device ready");
 		window.localStorage.setItem( bubu, pet );
