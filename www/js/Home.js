@@ -1,8 +1,16 @@
 
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
-		console.log("device ready");
-		}
+        $("#natRes").click(function()
+           {
+            window.location="NatParks.html"; 
+           } );
+        $("#luxRes").click(function()
+           {
+            window.location="LuxRes.html"; 
+           } );
+        }
+
 
     // device APIs are available
     //
