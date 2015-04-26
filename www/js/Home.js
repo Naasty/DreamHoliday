@@ -1,7 +1,7 @@
 
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
-        $("#natRes").click(function()
+        $("#natPark").click(function()
            {
             window.location="NatParks.html"; 
            } );
