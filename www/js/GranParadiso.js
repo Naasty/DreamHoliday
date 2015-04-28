@@ -18,6 +18,7 @@ function imageSearch(place)
      imageSearch = new google.search.ImageSearch();
      imageSearch.setSearchCompleteCallback(this, imageSearchComplete, null);
      imageSearch.execute(place);
+     google.search.Search.getBranding('branding');
 }
 
 function imageSearchComplete()
