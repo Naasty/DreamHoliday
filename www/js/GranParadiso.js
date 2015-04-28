@@ -30,8 +30,8 @@ function imageSearchComplete()
        	  var result = results[i];
        	  var imgContainer = document.createElement('div');
        	   var newImg = document.createElement('img');
-       	    newImg.src=result.tbUrl;
-            newImg.width=200;
+       	    newImg.src=result.unescapedUrl;
+            newImg.width=300;
             newImg.height=200;
             imgContainer.appendChild(newImg);
          
