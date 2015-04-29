@@ -13,7 +13,7 @@ function onLoad()
   if(site!=null)
   {
      $('#site').attr('href',site);
-     $('#site').html("Enter website");
+     $('#site').html("Book your accomodation");
    }
 	placeSearch(title);
 	imageSearch(title);
