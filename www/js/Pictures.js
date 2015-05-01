@@ -15,8 +15,21 @@ function onLoad()
      $('#site').attr('href',site);
      $('#site').html("Book your accomodation");
    }
+   showMap();
 	placeSearch(title);
 	imageSearch(title);
+  
+}
+
+function showMap()
+{
+  var pos=window.sessionStorage.getItem("position");
+  var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
+
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: pyrmont,
+      zoom: 15
+    });
 }
 
 function imageSearch(place)
@@ -49,7 +62,3 @@ function imageSearchComplete()
 
 }
 
-function placeSearch(place)
-{	
-	
-}
