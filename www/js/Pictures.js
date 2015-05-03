@@ -1,11 +1,11 @@
-https://developers.google.com/image-search/v1/devguide
+//https://developers.google.com/image-search/v1/devguide
 
 google.load("search", "1");
 
 var map;
 var imageSearch;
 
-function onLoad()
+function initialize()
 {
 	var title = window.sessionStorage.getItem("place");
   var site = window.sessionStorage.getItem("site");
@@ -16,20 +16,26 @@ function onLoad()
      $('#site').html("Book your accomodation");
    }
    showMap();
-	placeSearch(title);
+	//placeSearch(title);
 	imageSearch(title);
   
 }
 
 function showMap()
 {
-  var pos=window.sessionStorage.getItem("position");
-  var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
+  var pos =JSON.parse(window.sessionStorage.getItem("position"));
+  var mapCenter = new google.maps.LatLng(pos.lat,pos.lng);
 
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: pyrmont,
-      zoom: 15
+
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+      center: mapCenter,
+      zoom: 14
     });
+
+  var marker = new google.maps.Marker({
+      position: mapCenter,
+      map: map,
+  });
 }
 
 function imageSearch(place)
@@ -61,4 +67,5 @@ function imageSearchComplete()
      }
 
 }
+google.maps.event.addDomListener(window, "load", initialize);
 
