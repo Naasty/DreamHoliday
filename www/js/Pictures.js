@@ -8,7 +8,7 @@ var imageSearch;
 function initialize()
 {
   $.ajaxSetup({ cache: true });
-  $.getScript('https//connect.facebook.net/en_US/sdk.js', function(){
+  $.getScript('http://connect.facebook.net/en_US/sdk.js', function(){
     FB.init({
       appId: '955385664473150',
       version: 'v2.3' // or v2.0, v2.1, v2.0
