@@ -7,7 +7,24 @@ var imageSearch;
 
 function initialize()
 {
-  var fbLoginSuccess = function (userData) {
+  document.addEventListener("deviceready", onDeviceReady, false);
+	var title = window.sessionStorage.getItem("place");
+  var site = window.sessionStorage.getItem("site");
+	$('#header').html(title);
+  if(site!="")
+  {
+     $('#site').attr('href',site);
+     $('#site').html("Book your accomodation");
+   }
+   showMap();
+	//placeSearch(title);
+	imageSearch(title);
+  
+}
+
+function onDeviceReady()
+{
+var fbLoginSuccess = function (userData) {
     alert("UserInfo: " + JSON.stringify(userData));
     facebookConnectPlugin.getLoginStatus(
         function (status) {
@@ -23,20 +40,6 @@ function initialize()
         }
     );
 };
-
-
-	var title = window.sessionStorage.getItem("place");
-  var site = window.sessionStorage.getItem("site");
-	$('#header').html(title);
-  if(site!="")
-  {
-     $('#site').attr('href',site);
-     $('#site').html("Book your accomodation");
-   }
-   showMap();
-	//placeSearch(title);
-	imageSearch(title);
-  
 }
 
 function showMap()
