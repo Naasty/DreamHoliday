@@ -7,15 +7,28 @@ var imageSearch;
 
 function initialize()
 {
-  $.ajaxSetup({ cache: true });
-  $.getScript('http://connect.facebook.net/en_US/sdk.js', function(){
-    FB.init({
-      appId: '955385664473150',
-      version: 'v2.3' // or v2.0, v2.1, v2.0
-    });     
-    $('#loginbutton,#feedbutton').removeAttr('disabled');
-    FB.getLoginStatus(updateStatusCallback);
-  });
+  var fbLoginSuccess = function (userData) {
+    alert("UserInfo: " + JSON.stringify(userData));
+    facebookConnectPlugin.getLoginStatus(
+        function (status) {
+            alert("current status: " + JSON.stringify(status));
+
+            var options = { method:"feed" };
+            facebookConnectPlugin.showDialog(options,
+                function (result) {
+                    alert("Posted. " + JSON.stringify(result));             },
+            function (e) {
+                alert("Failed: " + e);
+            });
+        }
+    );
+};
+}
+
+facebookConnectPlugin.login(["public_profile"],
+    fbLoginSuccess,
+    function (error) { alert("" + error) }
+);
 	var title = window.sessionStorage.getItem("place");
   var site = window.sessionStorage.getItem("site");
 	$('#header').html(title);
