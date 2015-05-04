@@ -47,6 +47,10 @@ function showMap()
   });
 }
 
+function updateStatusCallback(status){
+   alert('Status updated!!');
+   // Your logic here
+}
 function imageSearch(place)
 {
      
