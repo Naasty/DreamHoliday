@@ -23,12 +23,8 @@ function initialize()
         }
     );
 };
-}
 
-facebookConnectPlugin.login(["public_profile"],
-    fbLoginSuccess,
-    function (error) { alert("" + error) }
-);
+
 	var title = window.sessionStorage.getItem("place");
   var site = window.sessionStorage.getItem("site");
 	$('#header').html(title);
