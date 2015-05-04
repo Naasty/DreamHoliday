@@ -44,7 +44,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="<VERSION>">
+	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.8.0">
         <param name="APP_ID" value="955385664473150" />
         <param name="APP_NAME" value="DreamHoliday" />
     </gap:plugin>
