@@ -10,9 +10,7 @@ function initialize()
   document.addEventListener("deviceready", onDeviceReady, false);
 	var title = window.sessionStorage.getItem("place");
   var site = window.sessionStorage.getItem("site");
-  $('#Sort').change(function(){
-    alert($('#Sort').val());
-  })
+
 	$('#header').html(title);
   if(site!=null)
   {
@@ -86,12 +84,12 @@ function imageSearchComplete()
 	   var results = imageSearch.results;
        for (var i = 0; i < 4; i++) {
        	  var result = results[i];
-       	  var imgContainer = document.createElement('div');
+       	  //var imgContainer = document.createElement('div');
        	   var newImg = document.createElement('img');
        	    newImg.src=result.unescapedUrl;
             newImg.width=300;
             newImg.height=200;
-            imgContainer.appendChild(newImg);
+            contentDiv.appendChild(newImg);
          
             // Put our title + image in the content
             contentDiv.appendChild(imgContainer);
