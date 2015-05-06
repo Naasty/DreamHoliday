@@ -55,7 +55,7 @@ function failPosition()
 function sort(position)
 {
 	for(var i=0;i<state.places.length-1;i++)
-		for(var j=i+1;state.places.length;j++)
+		for(var j=i+1;j<state.places.length;j++)
 		{
 			var pos1 = {
 				"lat":position.coords.latitude,
