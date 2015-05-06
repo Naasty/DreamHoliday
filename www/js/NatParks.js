@@ -11,4 +11,7 @@ $(".natParks").click(function(event)
 
     window.sessionStorage.setItem("position",JSON.stringify(pos));
 });
+$('#Sort').change(function(){
+    alert($('#Sort').val());
+  })
 }

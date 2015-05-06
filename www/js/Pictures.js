@@ -10,6 +10,9 @@ function initialize()
   document.addEventListener("deviceready", onDeviceReady, false);
 	var title = window.sessionStorage.getItem("place");
   var site = window.sessionStorage.getItem("site");
+  $('#Sort').change(function(){
+    alert($('#Sort').val());
+  })
 	$('#header').html(title);
   if(site!=null)
   {
