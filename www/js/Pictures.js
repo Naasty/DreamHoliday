@@ -33,7 +33,7 @@ function resetView(type)
     $('#wrapper').css('overflow','visible');
     //$('img').css('display','default');
     $('#content').css('width','300px');
-    
+    $('img').remove();
     var contentDiv = document.getElementById('content');
        for (var i = 0; i < 4; i++) {
           var result = results[i];
