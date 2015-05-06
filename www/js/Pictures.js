@@ -31,12 +31,37 @@ function resetView(type)
   if(type=="List")
   {
     $('#wrapper').css('overflow','visible');
-    $('img').css('display','default');
+    //$('img').css('display','default');
+    $('#content').css('width','300px');
+    
+    var contentDiv = document.getElementById('content');
+       for (var i = 0; i < 4; i++) {
+          var result = results[i];
+           var newImg = document.createElement('img');
+            newImg.src=result.unescapedUrl;
+            newImg.width=300;
+            newImg.height=200;
+         
+            contentDiv.appendChild(newImg);
+          }
   }
   else if (type=="Scroll")
   {
     $('#wrapper').css('overflow','scroll');
-    $('img').css('display','inline');
+    $('#content').css('width','1200px');
+    $('img').remove();
+   var contentDiv = document.getElementById('content');
+        results = imageSearch.results;
+       for (var i = 0; i < 4; i++) {
+          var result = results[i];
+           var newImg = document.createElement('img');
+           $('img').css('display','inline');
+            newImg.src=result.unescapedUrl;
+            newImg.width=300;
+            newImg.height=200;
+         
+            contentDiv.appendChild(newImg);
+          }
   }
 }
 /*
