@@ -1,3 +1,4 @@
+var state
 
 function onLoad(){
 $(".luxRes").click(function(event)
