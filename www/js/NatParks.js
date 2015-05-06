@@ -15,7 +15,7 @@ $(".natParks").click(function(event)
 $('#Sort').change(function(){
     saveState();
     reorder($('#Sort').val());
-    redisplay();
+    
   })
 }
 
@@ -39,11 +39,13 @@ function reorder(type)
 	if(type=="Name")
 	{
 		state.places.sort(function(a,b){return a.text.localeCompare(b.text)});
+		redisplay();
 	}
 
 	if(type=="Distance")
 	{
         navigator.geolocation.getCurrentPosition(sort, failPosition,{timeout:10000});
+	    redisplay();
 	}
 }
 
