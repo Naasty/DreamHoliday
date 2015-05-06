@@ -44,6 +44,8 @@ function resetView(type)
          
             contentDiv.appendChild(newImg);
           }
+          google.search.Search.getBranding('branding');
+}
   }
   else if (type=="Scroll")
   {
@@ -62,6 +64,8 @@ function resetView(type)
          
             contentDiv.appendChild(newImg);
           }
+          google.search.Search.getBranding('branding');
+}
   }
 }
 /*
