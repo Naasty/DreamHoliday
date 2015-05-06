@@ -15,7 +15,6 @@
     // device APIs are available
     //
     function onDeviceReady() {
-		alert("device ready");
         
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
@@ -28,5 +27,4 @@
     }
 	
 	function onResume() {
-		alert("resume");
     }
