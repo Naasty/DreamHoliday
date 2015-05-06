@@ -4,10 +4,11 @@ google.load("search", "1");
 
 var map;
 var imageSearch;
+var results;
 
 function initialize()
 {
-  document.addEventListener("deviceready", onDeviceReady, false);
+  //document.addEventListener("deviceready", onDeviceReady, false);
 	var title = window.sessionStorage.getItem("place");
   var site = window.sessionStorage.getItem("site");
 
@@ -20,9 +21,25 @@ function initialize()
    showMap();
 	//placeSearch(title);
 	imageSearch(title);
-  
+  $('#view').change(function(){
+      resetView($('#view').val());
+  })
 }
 
+function resetView(type)
+{
+  if(type=="List")
+  {
+    $('#wrapper').css('overflow','visible');
+    $('img').css('display','default');
+  }
+  else if (type=="Scroll")
+  {
+    $('#wrapper').css('overflow','scroll');
+    $('img').css('display','inline');
+  }
+}
+/*
 function onDeviceReady()
 {
   facebookConnectPlugin.login(["public_profile"],
@@ -46,6 +63,7 @@ var fbLoginSuccess = function (userData) {
     );
 };
 }
+*/
 
 function showMap()
 {
@@ -80,12 +98,11 @@ function imageSearch(place)
 function imageSearchComplete()
 {
 	if (imageSearch.results && imageSearch.results.length > 0) {
-	   var contentDiv = document.getElementById('content');
-     	   var results = imageSearch.results;
-       for (var i = 0; i < 10; i++) {
+	     var contentDiv = document.getElementById('content');
+     	  results = imageSearch.results;
+       for (var i = 0; i < 4; i++) {
        	  var result = results[i];
        	   var newImg = document.createElement('img');
-          // $(newImg).css('display','inline');
        	    newImg.src=result.unescapedUrl;
             newImg.width=300;
             newImg.height=200;
