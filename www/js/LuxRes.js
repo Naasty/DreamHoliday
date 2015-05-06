@@ -73,7 +73,7 @@ function sort(position)
 
 function redisplay()
 {
-	$('.natplace-name').each(function(index){
+	$('.luxRes-name').each(function(index){
     		this.id = state.places[index].id;
     		$(this).data(this.id,state.places[index].location);
     		this.innerText = state.places[index].text;
