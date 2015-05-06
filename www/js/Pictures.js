@@ -11,7 +11,7 @@ function initialize()
 	var title = window.sessionStorage.getItem("place");
   var site = window.sessionStorage.getItem("site");
 	$('#header').html(title);
-  if(site!="")
+  if(site!=null)
   {
      $('#site').attr('href',site);
      $('#site').html("Book your accomodation");
