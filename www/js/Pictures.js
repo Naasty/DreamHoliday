@@ -81,18 +81,20 @@ function imageSearchComplete()
 {
 	if (imageSearch.results && imageSearch.results.length > 0) {
 	   var contentDiv = document.getElementById('content');
+     contentDiv.setAttribute("float","left");
+     contentDiv.setAttribute("overflow","hidden");
 	   var results = imageSearch.results;
        for (var i = 0; i < 4; i++) {
        	  var result = results[i];
-       	  //var imgContainer = document.createElement('div');
+       	  var imgContainer = document.createElement('div');
        	   var newImg = document.createElement('img');
        	    newImg.src=result.unescapedUrl;
             newImg.width=300;
             newImg.height=200;
-            contentDiv.appendChild(newImg);
+            imgContainer.appendChild(newImg);
          
             // Put our title + image in the content
-            //contentDiv.appendChild(imgContainer);
+            contentDiv.appendChild(imgContainer);
           }
      }
 
