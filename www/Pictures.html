@@ -33,14 +33,15 @@
 	<div id="map-canvas" style="weight:200px;height:200px"></div>
 	<label> View </label>
       <select id="view"  data-theme="b" data-mini="true" >
-        <option value="List">
+	    <option value="Scroll">
+                    Scroll
+                </option>  
+         <option value="List">
                     List
                 </option>
-                <option value="Scroll">
-                    Scroll
-                </option>               
+                             
       </select>
-	<div style="width:400;overflow:scroll">
+	<div style="width:400;overflow:scroll" id="wrapper">
       <div id='content' style="width:1200px;">
 	  </div>
     </div>
