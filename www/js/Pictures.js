@@ -92,7 +92,7 @@ function imageSearchComplete()
             contentDiv.appendChild(newImg);
          
             // Put our title + image in the content
-            contentDiv.appendChild(imgContainer);
+            //contentDiv.appendChild(imgContainer);
           }
      }
 
