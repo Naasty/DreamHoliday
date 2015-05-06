@@ -15,6 +15,7 @@ $(".natParks").click(function(event)
 $('#Sort').change(function(){
     saveState();
     reorder($('#Sort').val());
+    redisplay();
   })
 }
 
