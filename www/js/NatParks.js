@@ -45,7 +45,7 @@ function reorder(type)
 	if(type=="Distance")
 	{
         navigator.geolocation.getCurrentPosition(sort, failPosition,{timeout:10000});
-	    redisplay();
+	    
 	}
 }
 
@@ -69,6 +69,7 @@ function sort(position)
 				state.places[j]=aux;
 			}
 		}
+		redisplay();
 }
 
 function redisplay()
