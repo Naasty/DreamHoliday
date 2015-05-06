@@ -57,7 +57,8 @@ function sort(position)
 	for(var i=0;i<state.places.length-1;i++)
 		for(var j=i+1;state.places.length;j++)
 		{
-			if(getDistance(position.coords,state.places[i].location)>getDistance(position.coords,state.places[i].location))
+			var pos1 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+			if(getDistance(pos1,state.places[i].location)>getDistance(pos1,state.places[i].location))
 			{
 				var aux=state.places[i];
 				state.places[i]=state.places[j];
