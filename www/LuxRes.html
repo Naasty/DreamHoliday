@@ -22,28 +22,37 @@
     </h4>
 	</div>
    </div>
+   <label> Sort </label>
+   <select id="Sort"  data-theme="a" data-mini="true" >
+      <option value="Favourites">
+                    Favourites
+                </option>
+                <option value="Name">
+                    Name
+                </option>
+                <option value="Distance">
+                    Distance from you
+                </option> 
+      </select>
    <div>
-     <ul data-role="listview">
+     <ul data-role="listview" id="placesList">
 	    <li class="luxRes" >
 		   <h2 id="location1" class="luxRes-name"  
-		        data-location1='{"lat":"-16.749697","lng":"-179.683398","site":"http://www.lhw.com/hotel/Laucala-Island-Resort-Laucala-Island-Fiji"}'>
-		         
+		        data-location1='{"lat":"-16.749697","lng":"-179.683398","site":"http://www.lhw.com/hotel/Laucala-Island-Resort-Laucala-Island-Fiji"}'>		         
 		        Laucala Island Resort Fiji
 		   </h2>
 		</li>
 
 		<li class="luxRes">
 		   <h2 id ="location2" class="luxRes-name" 
-		   data-location2='{"lat":"-4.882606","lng":"39.679372", "site": "http://www.themantaresort.com/the-resort/accommodation/"}'>
-		   
+		   data-location2='{"lat":"-4.882606","lng":"39.679372", "site": "http://www.themantaresort.com/the-resort/accommodation/"}'>		   
 		       The Manta Resort, Zanzibar
 		   </h2>
 		</li>   
 		
 		<li class="luxRes">
 		   <h2 id="location3" class="luxRes-name" 
-		   data-location3='{"lat":"13.070102","lng":"-59.576505", "site": "http://www.sandals.co.uk/main/barbados/bd-home/"}'>
-		      
+		   data-location3='{"lat":"13.070102","lng":"-59.576505", "site": "http://www.sandals.co.uk/main/barbados/bd-home/"}'>	      
 			  Barbados Resort
 		   </h2>
 		</li>  
