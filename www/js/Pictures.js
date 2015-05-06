@@ -81,9 +81,8 @@ function imageSearchComplete()
 {
 	if (imageSearch.results && imageSearch.results.length > 0) {
 	   var contentDiv = document.getElementById('content');
-     contentDiv.setAttribute("float","left");
-     contentDiv.setAttribute("overflow","hidden");
-	   var results = imageSearch.results;
+     contentDiv.setAttribute("display","inline");
+     	   var results = imageSearch.results;
        for (var i = 0; i < 4; i++) {
        	  var result = results[i];
        	  var imgContainer = document.createElement('div');
