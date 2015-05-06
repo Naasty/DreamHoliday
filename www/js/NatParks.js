@@ -60,7 +60,7 @@ function sort(position)
 			var pos1 = {
 				"lat":position.coords.latitude,
 			     "lng":position.coords.longitude}
-			if(getDistance(pos1,state.places[i].location)>getDistance(pos1,state.places[i].location))
+			if(getDistance(pos1,state.places[i].location)>getDistance(pos1,state.places[j].location))
 			{
 				var aux=state.places[i];
 				state.places[i]=state.places[j];
