@@ -23,7 +23,7 @@ function saveState()
     state={
     	"places":new Array()
     };
-    $('.natplace-name').each(function(index){
+    $('.luxRes-name').each(function(index){
     	state.places[index]={
     		"id":this.id,
     		"location":$(this).data(this.id),
