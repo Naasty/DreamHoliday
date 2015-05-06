@@ -81,19 +81,16 @@ function imageSearchComplete()
 {
 	if (imageSearch.results && imageSearch.results.length > 0) {
 	   var contentDiv = document.getElementById('content');
-     contentDiv.setAttribute("display","inline");
      	   var results = imageSearch.results;
        for (var i = 0; i < 4; i++) {
        	  var result = results[i];
-       	  var imgContainer = document.createElement('div');
        	   var newImg = document.createElement('img');
+           $(newImg).css('display','inline');
        	    newImg.src=result.unescapedUrl;
             newImg.width=300;
             newImg.height=200;
-            imgContainer.appendChild(newImg);
          
-            // Put our title + image in the content
-            contentDiv.appendChild(imgContainer);
+            contentDiv.appendChild(newImg);
           }
      }
 
