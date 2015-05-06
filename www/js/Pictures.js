@@ -45,8 +45,8 @@ function resetView(type)
             contentDiv.appendChild(newImg);
           }
           google.search.Search.getBranding('branding');
-}
-  }
+    }
+  
   else if (type=="Scroll")
   {
     $('#wrapper').css('overflow','scroll');
@@ -67,7 +67,7 @@ function resetView(type)
           google.search.Search.getBranding('branding');
 }
   }
-}
+
 /*
 function onDeviceReady()
 {
