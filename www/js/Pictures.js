@@ -25,7 +25,7 @@ function initialize()
   if(site!=null)
   {
      $('#site').attr('href',site);
-     $('#site').html("Book your accomodation");
+     $('#site').html("Book your accommodation");
    }
 
    //Show the map with the position of this place
