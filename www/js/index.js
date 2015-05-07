@@ -1,7 +1,6 @@
+//After the first page has loaded, change to the second page
+
 function onLoad()
 {
-	setTimeout(function()
-	{
-		window.location="Home.html";
-	},1000);
+		window.location="Home.html";	
 }
