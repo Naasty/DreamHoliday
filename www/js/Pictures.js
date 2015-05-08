@@ -98,6 +98,7 @@ function resetView(type)
   }
 
 //Show a map with the place
+//https://developers.google.com/places/javascript/
 function showMap()
 {
   //Get the position of this place
